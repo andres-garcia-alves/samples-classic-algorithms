@@ -6,6 +6,8 @@ public class MergeSort : Algorithm
     {
         int[] helper = new int[array.Length];
 
+        base.DisplayMessage("");
+        base.DisplayMessage("Merge Sort");
         base.DisplayElements($"Initial Values:  ", array);
         this.Sort(array, helper, 0, array.Length - 1, 0);
     }
