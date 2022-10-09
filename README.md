@@ -1,11 +1,12 @@
 # Classic Algorithms
 
-Just a bounch of classic algorithms for sorting, searching, linked-list use, trees traverse, and so on.  
+Just a bounch of classic algorithms for sorting, searching, linked-list use, tree traverse, and so on.  
 All well commented and with console trace info for easy learning :-)
 
 Current algorithms:
 - merge sort
 - quick sort
+- binary search
 
 More algorithms to come !!
 
