@@ -1,24 +1,27 @@
-public class QuickSort : Algorithm
+public class QuickSort : AlgorithmBase
 {
     public void Sort(int[] array)
     {
-        base.DisplayElements($"Initial Values:  ", array);
+        base.DisplayMessage("QUICK SORT");
+        base.DisplayMessage("********************");
+
+        base.DisplayElements($"Initial values:  ", array);
         this.Sort(array, 0, array.Length - 1, 0);
     }
 
     private void Sort(int[] array, int left, int right, byte recursionLevel) {
 
         recursionLevel++;
-        base.DisplayElements($"Partition Method (R{recursionLevel}.L)", array);
+        base.DisplayElements($"Partition method (R{recursionLevel}.L)", array);
         int index = this.Partition(array, left, right);
 
         if (left < index - 1) { // sort left half
-            base.DisplayElements($"Sort Method (R{recursionLevel}.L)", array);
+            base.DisplayElements($"Sort method (R{recursionLevel}.L)", array);
             this.Sort(array, left, index - 1, recursionLevel);
         }
 
         if (index < right) { // sort right half
-            base.DisplayElements($"Sort Method (R{recursionLevel}.R)", array);
+            base.DisplayElements($"Sort method (R{recursionLevel}.R)", array);
             this.Sort(array, index, right, recursionLevel);
         }
     }
@@ -27,7 +30,7 @@ public class QuickSort : Algorithm
         
         int pivotIndex = (left + right) / 2;  // pivot point
         int pivotValue = array[pivotIndex];
-        base.DisplayMessage($"Pivot Point \t\t index: {pivotIndex}, value: {pivotValue}");
+        base.DisplayMessage($"Pivot point \t\t index: {pivotIndex}, value: {pivotValue}");
 
         while (left <= right) {
             // move indexes to next element that is on the wrong side of the pivot

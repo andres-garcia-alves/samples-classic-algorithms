@@ -1,4 +1,4 @@
-public class MergeSort : Algorithm
+public class MergeSort : AlgorithmBase
 {
     public MergeSort() {}
 
@@ -6,9 +6,10 @@ public class MergeSort : Algorithm
     {
         int[] helper = new int[array.Length];
 
-        base.DisplayMessage("");
-        base.DisplayMessage("Merge Sort");
-        base.DisplayElements($"Initial Values:  ", array);
+        base.DisplayMessage("MERGE SORT");
+        base.DisplayMessage("********************");
+
+        base.DisplayElements($"Initial values:  ", array);
         this.Sort(array, helper, 0, array.Length - 1, 0);
     }
 
@@ -20,14 +21,14 @@ public class MergeSort : Algorithm
             int middle = (low + high) / 2;
             
             // recursion
-            base.DisplayElements($"Sort Method (R{recursionLevel}.L)", array, helper);
+            base.DisplayElements($"Sort method (R{recursionLevel}.L)", array, helper);
             this.Sort(array, helper, low, middle, recursionLevel);
 
-            base.DisplayElements($"Sort Method (R{recursionLevel}.R)", array, helper);
+            base.DisplayElements($"Sort method (R{recursionLevel}.R)", array, helper);
             this.Sort(array, helper, middle + 1, high, recursionLevel);
 
             // merge operation of both branches
-            base.DisplayElements($"Merge Method (R{recursionLevel})", array, helper);
+            base.DisplayElements($"Merge method (R{recursionLevel})", array, helper);
             this.Merge(array, helper, low, middle, high);
         }
     }
@@ -57,6 +58,6 @@ public class MergeSort : Algorithm
         for (int i=0; i <= remaining; i++)
             array[current + i] = helper[left + i];
         
-        base.DisplayElements($"Merge Method END", array, helper);
+        base.DisplayElements($"Merge method END", array, helper);
     }
 }

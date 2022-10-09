@@ -1,6 +1,6 @@
 using System.Text;
 
-public abstract class Algorithm
+public abstract class AlgorithmBase
 {
     public void DisplayElements(string prefix, int[] array) {
         this.DisplayElements(prefix, array, new int[0]);
@@ -17,15 +17,15 @@ public abstract class Algorithm
 
         message.Append($"\t array [");
         foreach (int elem in array)
-            message.Append($"{elem},");
-        message.Remove(message.Length - 1, 1);
+            message.Append($"{elem}, ");
+        message.Remove(message.Length - 2, 2);
         message.Append("] ");
 
         if (helper.Length != 0) {
             message.Append($"\t helper [");
             foreach (int elem in helper)
-                message.Append($"{elem},");
-            message.Remove(message.Length - 1, 1);
+                message.Append($"{elem}, ");
+            message.Remove(message.Length - 2, 2);
             message.Append("]");
         }
 
