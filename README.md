@@ -1,6 +1,6 @@
 # Classic Algorithms
 
-Just a bounch of classic algorithms for sorting, searching, linked-list use, trees traverse, and so on.
+Just a bounch of classic algorithms for sorting, searching, linked-list use, trees traverse, and so on.  
 All well commented and console trace info for easy learning :-)
 
 Current algorithms:
