@@ -10,6 +10,8 @@ Current algorithms:
 
 More algorithms to come !!
 
+&nbsp;
+
 ### Requirements
 
 - .NET 6.0 runtime is needed.  
