@@ -16,5 +16,11 @@ More algorithms to come !!
 
 &nbsp;
 
-This is the first public release of this project.  
-Please send me your feedback about this app: andres.garcia.alves@gmail.com  
+### Version History
+
+v1.0 (2022.10.09) - Initial release.  
+
+&nbsp;
+
+This source code is licensed under GPL v3.0  
+Please send me your feedback about this project: andres.garcia.alves@gmail.com  
